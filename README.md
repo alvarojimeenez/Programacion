@@ -1,23 +1,23 @@
 # Programacion
 
 ## Teoria 
-   - [Introducción y tipo de datos][introduccion]
-   - [Operaciones][operar]
-   - [Tablas de verdad][tabla]
-   - [Estructuras condicionales][condicion]
-   - [Bucles][bucles]
-   - [Cadenas][cadenas]
-   - [Listas][listas]
-   - [Funciones][funcion]
+   - [_Introducción y tipo de datos_][introduccion]
+   - [_Operaciones_][operar]
+   - [_Tablas de verdad_][tabla]
+   - [_Estructuras condicionales_][condicion]
+   - [_Bucles_][bucles]
+   - [_Cadenas_][cadenas]
+   - [_Listas_][listas]
+   - [_Funciones_][funcion]
 ## Práctica
-  - [Boletin 1][boletin1]
-  - [Boletin 2][boletin2]
-  - [Boletin 3][boletin3]
-  - [Boletin 4][boletin4]
-  - [Boletin 5][boletin5]
-  - [Boletin 6][boletin6]
-  - [Boletin 7][boletin7]
-  - [Boletin funciones][funciones]
+  - [_Boletin 1_][boletin1]
+  - [_Boletin 2_][boletin2]
+  - [_Boletin 3_][boletin3]
+  - [_Boletin 4_][boletin4]
+  - [_Boletin 5_][boletin5]
+  - [_Boletin 6_][boletin6]
+  - [_Boletin 7_][boletin7]
+  - [_Boletin funciones_][funciones]
 
 [boletin1]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/Boletin1.py
 [boletin2]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/Boletin2.py
