@@ -8,6 +8,7 @@
    - [Bucles][bucles]
    - [Cadenas][cadenas]
    - [Listas][listas]
+   - [Funciones][funcion]
 ## Práctica
   - [Boletin 1][boletin1]
   - [Boletin 2][boletin2]
@@ -33,3 +34,4 @@
 [bucles]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/bucles.py
 [cadenas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/cadena.py
 [listas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/listas.py
+[funcion]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/funcion.py
