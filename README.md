@@ -30,6 +30,6 @@
 [operar]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/operaciones.py
 [tabla]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/True_false.py
 [condicion]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/Condicionales.py
-[bucles]:
+[bucles]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/bucles.py
 [cadenas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/cadena.py
 [listas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/listas.py
