@@ -1,5 +1,5 @@
-# Programacion
-
+# Programacion en Python
+![imagen_python](https://github.com/alvarojimeenez/Programacion/blob/master/phyton1.png)
 ## Teoria 
    - [_Introducción y tipo de datos_][introduccion]
    - [_Operaciones_][operar]
@@ -35,3 +35,4 @@
 [cadenas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/cadena.py
 [listas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/listas.py
 [funcion]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/funcion.py
+
