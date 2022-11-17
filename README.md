@@ -35,4 +35,6 @@
 [cadenas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/cadena.py
 [listas]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/listas.py
 [funcion]:https://github.com/alvarojimeenez/Programacion/blob/master/Programaci%C3%B3n/funcion.py
+[enlace]:https://github.com/jms3du/prog_python
 
+Puedes ampliar más información a traves de este [enlace][enlace]
