@@ -1,6 +1,6 @@
 # Programacion en Python
 ![imagen_python](https://github.com/alvarojimeenez/Programacion/blob/master/phyton1.png)
-## Teoria 
+## Teoria y ejemplos
    - [_Introducción y tipo de datos_][introduccion]
    - [_Operaciones_][operar]
    - [_Tablas de verdad_][tabla]
