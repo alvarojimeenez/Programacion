@@ -7,21 +7,22 @@ import java.util.Set;
 import java.util.TreeMap;
 
 public class Palabra {
-	
 	private String nombrePalabra; 
 	private String significado;
 	private Map<String, Set<String>> diccionario;
 	
-	public Palabra(String nombrePalabra) {
+	public Palabra() {
 		super();
-		this.nombrePalabra = nombrePalabra;
-		this.significado = significado;
 		this.diccionario = new HashMap<>();
 	}
 	
 	public void agregarPalabra(String nombrePalabra, String significado) {
-		diccionario.put(nombrePalabra, new HashSet<>());
-		diccionario.get(nombrePalabra).add(significado);
+		if (!diccionario.containsKey(nombrePalabra)) {
+			diccionario.put(nombrePalabra, new HashSet<>());
+			diccionario.get(nombrePalabra).add(significado);			
+		}else {
+			diccionario.get(nombrePalabra).add(significado);
+		}
 	}
 	
 	public String buscarPalabra(String nombrePalabra) {
@@ -34,12 +35,13 @@ public class Palabra {
 	
 	public void borrarPalabra(String palabra) {
 		if (diccionario.containsKey(palabra)) {
-			diccionario.remove(palabra).remove(this.significado);
+			diccionario.remove(palabra);
 		}
 	}
 
 	public Map<String, Set<String>> listarPalabrasQueEmpiecenPorUnaCadena(String cadena) {
 		Map<String, Set<String>> listaOrdenada = new TreeMap<>();
+		
 		for (String d : diccionario.keySet()) {
 			if (d.startsWith(cadena)) {
 				listaOrdenada.put(d, diccionario.get(d));
@@ -52,6 +54,15 @@ public class Palabra {
 	public String toString() {
 		return "Diccionario: "
 				+ diccionario + "]";
+	}
+	
+	public boolean equals(Object obj) {
+		boolean sonIguales = this == obj; 
+		if (!sonIguales && obj!=null && obj instanceof Palabra) {
+			Palabra casteado = (Palabra) obj; 
+			sonIguales = this.nombrePalabra.equals(casteado.nombrePalabra);
+		}
+		return sonIguales;
 	}
 	
 	

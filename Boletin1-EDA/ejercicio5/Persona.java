@@ -29,7 +29,7 @@ public abstract class Persona {
 	}
 	
 	public String mostrarMensajes() throws Exception {
-		if (this.buzon.size()==0) {
+		if (this.buzon.isEmpty()) {
 			throw new Exception("No tiene mensajes para leer");
 		}else {
 			return this.buzon.toString();
