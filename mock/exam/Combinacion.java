@@ -2,8 +2,6 @@ package common.collections.mock.exam;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
 import java.util.Set;
 
 public class Combinacion {
@@ -17,7 +15,7 @@ public class Combinacion {
 	private Collection<Integer> estrellas;
 	
 	
-	public Combinacion (int num1, int num2, int num3, int num4, int num5, int estr1, int estr2) throws Exception {
+	public Combinacion (int num1, int num2, int num3, int num4, int num5, int estr1, int estr2) throws CombinacionException {
 		this.numeros = new HashSet<>();
 		this.numeros.add(num1);
 		this.numeros.add(num2);
@@ -27,20 +25,25 @@ public class Combinacion {
 		this.estrellas = new HashSet<>();
 		this.estrellas.add(estr1);
 		this.estrellas.add(estr2);
-		for (int n : this.numeros ) {
-			for (int e : this.estrellas) {
-				if (!(n>=VALOR_MINIMO || n<=VALOR_MAXIMO_NUMEROS) && this.numeros.size()!=TOTAL_NUMEROS && 
-				   (!(e>=VALOR_MINIMO || e<=VALOR_MAXIMO_ESTRELLAS) && this.estrellas.size()!=TOTAL_ESTRELLAS) ) {
-					throw new CombinacionException("Los valores introducidos no son válidos.");
-				}
-			}	
+		if (this.numeros.size()!=TOTAL_NUMEROS) {
+			throw new CombinacionException("Los valores introducidos no son válidos.");
 		}
+		if (this.estrellas.size()!=TOTAL_ESTRELLAS) {
+			throw new CombinacionException("Los valores introducidos no son válidos.");
+		}
+		for (int n : this.numeros ) {
+			if (n<VALOR_MINIMO || n>VALOR_MAXIMO_NUMEROS) {
+				throw new CombinacionException("Los valores introducidos no son válidos.");
+			}
+		}
+		for (int e : this.estrellas) {
+			if (e<VALOR_MINIMO || e>VALOR_MAXIMO_NUMEROS) {
+				throw new CombinacionException("Los valores introducidos no son válidos.");
+			}
+		}	
 	}
 	
-	public Collection<Integer> mostrar() {
-		return this.numeros;
-	}
-	public Combinacion(Set<Integer> numeros, Set<Integer> estrellas) {
+	public Combinacion(Collection<Integer> numeros, Collection<Integer> estrellas) {
 		this.numeros = numeros; 
 		this.estrellas = estrellas;
 	}
@@ -70,19 +73,18 @@ public class Combinacion {
 	}
 	*/
 	public int comprobarCombinacion(Combinacion c) {
-		int contNumeros = 0;
-		int contEstrellas = 0;
+		int cont = 0;
 		for (Integer n : this.numeros) {
 			if (c.getNumeros().contains(n) ) {
-				contNumeros++;
+				cont++;
 			}
 		}
 		for (Integer e : this.estrellas) {
 			if (c.getEstrellas().contains(e)) {
-				contEstrellas++;
+				cont++;
 			}
 		}
-		return contNumeros+contEstrellas;
+		return cont;
 	}
 	
 	public boolean equals(Object obj) {
@@ -95,7 +97,7 @@ public class Combinacion {
 	}
 	@Override
 	public String toString() {
-		return "Combinacion " + numeros + estrellas;
+		return " ," + numeros + estrellas;
 	}
 	
 	

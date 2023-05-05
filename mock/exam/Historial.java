@@ -3,8 +3,10 @@ package common.collections.mock.exam;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Historial {
 	
@@ -86,6 +88,81 @@ public class Historial {
 			}
 		}
 		return aux;
+	}
+	
+	public Map<LocalDate,Combinacion> mostrarMapaHistorico() {
+		return this.sorteos;
+	}
+	
+	public Set<Integer> mostrarNumeroMasRepetido() {
+		Map<Integer,Integer> map = numerosRepetidos();
+		
+		int contador = 0;
+		Set<Integer> repetidos = new HashSet<>();
+		for (Integer n : map.keySet()) {
+			if (map.get(n)==contador) {
+				repetidos.add(n);
+				
+			}else if (map.get(n)>contador) {
+				contador = map.get(n);
+				repetidos.clear();
+				repetidos.add(n);
+			}
+			}
+		return repetidos;
+		}
+		
+	public Set<Integer> mostrarEstrellaMasRepetida() {
+		Map<Integer,Integer> map = estrellasRepetidas();
+		
+		int contador = 0;
+		Set<Integer> repetidos = new HashSet<>();
+		for (Integer n : map.keySet()) {
+			if (map.get(n)==contador) {
+				repetidos.add(n);
+				
+			}else if (map.get(n)>contador) {
+				contador = map.get(n);
+				repetidos.clear();
+				repetidos.add(n);
+			}
+			}
+		return repetidos;
+		}
+		
+
+	protected Map<Integer, Integer> numerosRepetidos() {
+		Map<Integer,Integer> mapa = new HashMap<>();
+		for (LocalDate f: this.sorteos.keySet()) {
+			for (Integer n : this.sorteos.get(f).getNumeros()) {
+				if (!mapa.containsKey(n)) {
+					mapa.put(n, 0);	
+				}
+				mapa.put(n, mapa.get(n)+1);
+			}
+		}
+		return mapa;
+	}
+	
+	protected Map<Integer, Integer> estrellasRepetidas() {
+		Map<Integer,Integer> mapa = new HashMap<>();
+		for (LocalDate f: this.sorteos.keySet()) {
+			for (Integer e : this.sorteos.get(f).getEstrellas()) {
+				if (!mapa.containsKey(e)) {
+					mapa.put(e, 0);	
+				}
+				mapa.put(e, mapa.get(e)+1);
+			}
+		}
+		return mapa;
+	}
+	
+	public int maximoNumeroAciertos(Combinacion c) {
+		int contador = 0;
+		for (LocalDate f : this.sorteos.keySet()) {
+			contador = this.sorteos.get(f).comprobarCombinacion(c);
+		}
+		return contador;
 	}
 	
 	
